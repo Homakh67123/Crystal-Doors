@@ -34,6 +34,7 @@ The DAX expression uses the GROUPBY function in Power BI to create a summary tab
 
 Stacked Bar Chart: 
 Compares different delivery types against on-time and delayed deliveries, helping to monitor logistics efficiency.
+
 #OnTimeStatus = IF(
     DATEDIFF('01 01 2024 to 06 12 2024'[ Created On], '01 01 2024 to 06 12 2024'[ Delivery Date], DAY) <= 5,
     "On-Time",
