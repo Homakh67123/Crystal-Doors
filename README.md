@@ -21,6 +21,8 @@ to track the order lifecycle.
 
 Bar Chart: 
 Lists the top 5 customers by revenue, showcasing key contributors to the business’s profitability.
+The DAX expression uses the GROUPBY function in Power BI to create a summary table. It groups the data from the table '01 01 2024 to 06 12 2024' by the Customer column and calculates the count of Order No for each customer using COUNTX with CURRENTGROUP(). The result is a new table (order_customer) that shows each unique customer along with the number of orders they placed during the specified date range.
+order_customer = GROUPBY('01 01 2024 to 06 12 2024','01 01 2024 to 06 12 2024'[ Customer],"count",COUNTX(CURRENTGROUP(),'01 01 2024 to 06 12 2024'[Order No]))
 
 Stacked Bar Chart: 
 Compares different delivery types against on-time and delayed deliveries, helping to monitor logistics efficiency.
